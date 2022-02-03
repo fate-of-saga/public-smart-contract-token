@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-etherscan");
 require("@nomiclabs/hardhat-web3");
 const fs = require('fs')
 const privateKey = fs.readFileSync(".secrets").toString().trim() || "01234567890123456789"
+const apiKey = fs.readFileSync("apiKey").toString.trim()
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
@@ -25,7 +26,7 @@ const privateKey = fs.readFileSync(".secrets").toString().trim() || "01234567890
     }
   },
   etherscan: {
-    apiKey: "31VIEZSUSCUQMW7T2NHBXEZWIUGJDYH43P"
+    apiKey: [apiKey]
   },
   solidity: {
     version: "0.8.10",
