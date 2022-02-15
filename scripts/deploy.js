@@ -1,7 +1,7 @@
 const {ethers} = require("hardhat");
 async function main () {
 
-    const FunctionFactory = await ethers.getContractFactory("FateOfSaga");
+    const FunctionFactory = await ethers.getContractFactory("FateOfSagaToken");
     const FunctionInstance = await FunctionFactory.deploy();
     await FunctionInstance.deployed();
     console.log("This Contract deployed to:", FunctionInstance.address);
